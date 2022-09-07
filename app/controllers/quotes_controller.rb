@@ -7,4 +7,13 @@ class QuotesController < ApplicationController
   def index
     @quotes = Quote.all
   end
+
+  def new
+  end
+
+  def create
+    @quote = Quote.new(params.require(:quote).permit(:content))
+    @quote.save
+    redirect_to @quote
+  end
 end

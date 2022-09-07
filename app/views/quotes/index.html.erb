@@ -1,0 +1,19 @@
+<h1>Articles listing page</h1>
+
+<table>
+  <thead>
+  <tr>
+    <th>Author</th>
+    <th>Content</th>
+  </tr>
+  </thead>
+
+  <tbody>
+  <% @quotes.each do |quotes| %>
+    <tr>
+      <td>Some Author</td>
+      <td>"<%= quotes.content %>"</td>
+    </tr>
+  <% end %>
+  </tbody>
+</table>

@@ -1,1 +1,5 @@
 <h3><strong>Content: </strong><%= @quote.content %></h3>
+
+<%= link_to 'Edit', edit_quote_path(@quote) %> |
+<%= link_to 'Delete', quote_path(@quote), method: :delete, data: { confirm: "Are you sure?" } %> |
+<%= link_to 'Return to quotes listing', quotes_path %>

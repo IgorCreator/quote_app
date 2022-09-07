@@ -1,7 +1,7 @@
 class QuotesController < ApplicationController
+  before_action :set_quote, only: [:show, :edit, :update, :destroy]
 
   def show
-    @quote = Quote.find(params[:id])
   end
 
   def index
@@ -13,11 +13,10 @@ class QuotesController < ApplicationController
   end
 
   def edit
-    @quote = Quote.find(params[:id])
   end
 
   def create
-    @quote = Quote.new(params.require(:quote).permit(:content))
+    @quote = Quote.new(quote_params)
     if @quote.save
       flash[:notice] = "Quote was created successfully."
       redirect_to @quote
@@ -27,12 +26,26 @@ class QuotesController < ApplicationController
   end
 
   def update
-    @quote = Quote.find(params[:id])
-    if @quote.update(params.require(:quote).permit(:content))
+    if @quote.update(quote_params)
       flash[:notice] = "Quote was updated successfully."
       redirect_to @quote
     else
       render 'edit'
     end
+  end
+
+  def destroy
+    @quote.destroy
+    redirect_to quotes_path
+  end
+
+  private
+
+  def set_quote
+    @quote = Quote.find(params[:id])
+  end
+
+  def quote_params
+    params.require(:quote).permit(:content)
   end
 end

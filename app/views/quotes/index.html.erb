@@ -5,15 +5,23 @@
   <tr>
     <th>Author</th>
     <th>Content</th>
+    <th colspan="3" >Actions</th>
   </tr>
   </thead>
 
   <tbody>
-  <% @quotes.each do |quotes| %>
+  <% @quotes.each do |quote| %>
     <tr>
       <td>Some Author</td>
-      <td>"<%= quotes.content %>"</td>
+      <td>"<%= quote.content %>"</td>
+      <td><%= link_to 'Show', quote_path(quote) %></td>
+      <td><%= link_to 'Edit', edit_quote_path(quote) %></td>
+      <td><%= link_to 'Delete', quote_path(quote), method: :delete, data: { confirm: "Are you sure?" } %></td>
     </tr>
   <% end %>
   </tbody>
 </table>
+
+<p>
+  <%= link_to 'Create new quote', new_quote_path %>
+</p>

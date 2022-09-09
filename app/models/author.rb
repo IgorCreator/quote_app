@@ -12,6 +12,6 @@ class Author < ApplicationRecord
                           :message => "and Last name already exist"
 
   def full_name
-    [first_name, last_name].join(' ')
+    [first_name, middle_name, last_name].join(' ')
   end
 end

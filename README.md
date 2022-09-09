@@ -7,11 +7,13 @@ Inspiration came from the website [BrainyQuote](https://www.brainyquote.com)
 ### Implemented features
 * Bootstrap 5.2 installed: [instructions](https://dev.to/songta17/rails-6-with-bootstrap-5-5c08)
 * CRUD operations for Quotes obj
+* CRUD operations for Author obj
+* CRUD operations for Category obj
+* One to Many relationship for Author-Quote
+* Established many-to-many relationship: Quotes-Categories
 * UI representation for Quotes CRUD operations
 * Added users model: CRUD operations
 * Added auth support to the project
-* Added categories support
-* Established many-to-many relationship: quotes-categories
 
 ***
 ### Steps for running app

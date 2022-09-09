@@ -5,3 +5,15 @@
 #
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
+
+a1 = Author.create(first_name: "Buddha")
+q1 = Quote.create(content: "Three things cannot be long hidden: the sun, the moon, and the truth.", author_id: a1.id)
+q2 = Quote.create(content: "Do not dwell in the past, do not dream of the future, concentrate the mind on the present moment.", author_id: a1.id)
+
+a2 = Author.create(first_name: "Martin", middle_name: "Luther", last_name: "King")
+q3 = Quote.create(content: "Even if I knew that tomorrow the world would go to pieces, I would still plant my apple tree.", author_id: a2.id)
+q4 = Quote.create(content: "You are not only responsible for what you say, but also for what you do not say.", author_id: a2.id)
+
+a3 = Author.create(first_name: "Henry", last_name: "Ford")
+q5 = Quote.create(content: "When everything seems to be going against you, remember that the airplane takes off against the wind, not with it.", author_id: a3.id)
+q6 = Quote.create(content: "Obstacles are those frightful things you see when you take your eyes off your goal.", author_id: a3.id)

@@ -17,6 +17,7 @@ class QuotesController < ApplicationController
 
   def create
     @quote = Quote.new(quote_params)
+    @quote.author = Author.first # TODO: fix this mock
     if @quote.save
       flash[:notice] = "Quote was created successfully."
       redirect_to @quote

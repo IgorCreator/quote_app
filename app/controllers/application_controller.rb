@@ -1,4 +1,5 @@
 class ApplicationController < ActionController::Base
+  before_action :authenticate_user!
   helper_method :flash_style
 
   def flash_style(level)

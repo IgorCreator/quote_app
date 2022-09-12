@@ -19,3 +19,8 @@ body {
 #sticky-footer {
   flex-shrink: none;
 }
+
+.border-edge-custom {
+  border: 2px solid;
+  border-radius: 25px;
+}

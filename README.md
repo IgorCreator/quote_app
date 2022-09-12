@@ -14,6 +14,8 @@ Inspiration came from the website [BrainyQuote](https://www.brainyquote.com)
 * UI representation for Quotes CRUD operations
 * Added users model: CRUD operations
 * Added auth support to the project
+* CRUD operations for Users
+* Added bootstrap for Users: sign in/out
 
 ***
 ### Steps for running app

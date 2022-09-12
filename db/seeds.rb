@@ -17,3 +17,7 @@ q4 = Quote.create(content: "You are not only responsible for what you say, but a
 a3 = Author.create(first_name: "Henry", last_name: "Ford")
 q5 = Quote.create(content: "When everything seems to be going against you, remember that the airplane takes off against the wind, not with it.", author_id: a3.id)
 q6 = Quote.create(content: "Obstacles are those frightful things you see when you take your eyes off your goal.", author_id: a3.id)
+
+pwd = "123456"
+admin = User.create(email: "admin@gmail.com", password: pwd, password_confirmation: pwd)
+user = User.create(email: "user@gmail.com", password: pwd, password_confirmation: pwd)

@@ -15,7 +15,9 @@
     <main class="flex-shrink-0">
       <div id="page-content">
         <%= render 'shared/messages' %>
-        <%= yield %>
+        <div class="container">
+          <%= yield %>
+        </div>
       </div>
     </main>
     <%= render 'shared/footer'%>

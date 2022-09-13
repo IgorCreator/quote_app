@@ -4,15 +4,18 @@
     <div class="row justify-content-md-center">
       <div class="col-8 mt-4">
         <div class="card text-center shadow mb-5 bg-white rounded">
+          <div class="card-header font-italic">
+            <%= link_to author.full_name, author %>
+          </div>
           <div class="card-body">
-            <p class="card-text"><%= truncate(author.full_name, length: 100) %></p>
+            <%= gravatar_for author, size: 75 %>
+            <p class="card-text"><%= pluralize(author.quotes.count, "quote") %></p>
             <%= link_to "View", author_path(author), class: "btn btn-outline-success" %>
             <%= link_to "Edit", edit_author_path(author), class: "btn btn-outline-info" %>
             <%= link_to "Delete", author_path(author), class: "btn btn-outline-danger", method: :delete, data: { confirm: "Are you sure?" } %>
           </div>
           <div class="card-footer text-muted">
-            <small>Created <%= time_ago_in_words(author.created_at) %> ago,
-              edited <%= time_ago_in_words(author.updated_at) %> ago</small>
+            <small>Added <%= time_ago_in_words(author.created_at) %> ago</small>
           </div>
         </div>
       </div>

@@ -3,6 +3,7 @@
     <div class="col-6 mt-4">
       <div class="card text-center shadow mb-5 bg-white rounded">
         <div class="card-body">
+          <%= gravatar_for @author, size: 200 %>
           <h4 class="card-text mt-4"><%= simple_format(@author.full_name) %></h4>
           <%= link_to "Edit", edit_author_path(@author), class: "btn btn-outline-info" %>
           <%= link_to "Delete", author_path(@author), class: "btn btn-outline-danger", method: :delete, data: { confirm: "Are you sure?" } %>

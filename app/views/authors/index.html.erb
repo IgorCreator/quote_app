@@ -1,4 +1,6 @@
-<h1 class="text-center mt-4">Authors</h1>
+<h1 class="text-center m-4">Authors</h1>
+
+<%= will_paginate @authors, list_classes: %w(pagination justify-content-center) %>
 <div class="container">
   <% @authors.each do |author| %>
     <div class="row justify-content-md-center">
@@ -22,3 +24,4 @@
     </div>
   <% end %>
 </div>
+<%= will_paginate @authors, list_classes: %w(pagination justify-content-center) %>

@@ -2,14 +2,18 @@
   <div class="col-6">
   <h1><%= t('.sign_in') %></h1>
     <%= form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
-      <div class="form-group">
-        <%= f.label :email %>
-        <%= f.email_field :email, autofocus: true, autocomplete: 'email', class: 'form-control' %>
+      <div class="form-group row">
+        <%= f.label :email, class: "col-2 col-form-label text-dark" %>
+        <div class="col-10">
+          <%= f.email_field :email, autofocus: true, autocomplete: 'email', class: "form-control shadow rounded", placeholder: "Enter your email address" %>
+        </div>
       </div>
 
-      <div class="form-group">
-        <%= f.label :password %>
-        <%= f.password_field :password, autocomplete: 'current-password', class: 'form-control' %>
+      <div class="form-group row">
+        <%= f.label :password, class: "col-2 col-form-label text-dark" %>
+        <div class="col-10">
+          <%= f.password_field :password, autocomplete: 'current-password', class: "form-control shadow rounded", placeholder: "Enter your password" %>
+        </div>
       </div>
 
       <% if devise_mapping.rememberable? %>
@@ -22,7 +26,7 @@
       <% end %>
 
       <div class="form-group">
-        <%= f.submit t('.sign_in'), class: 'btn btn-primary' %>
+        <%= f.submit t('.sign_in'), class: 'btn btn-outline-success' %>
       </div>
     <% end %>
 

@@ -1,4 +1,7 @@
-<h1 class="text-center mt-4">Quotes</h1>
+<h1 class="text-center m-4">Quotes</h1>
+
+<%= will_paginate @quotes, list_classes: %w(pagination justify-content-center) %>
 <div class="container">
   <%= render "list" %>
 </div>
+<%= will_paginate @quotes, list_classes: %w(pagination justify-content-center) %>

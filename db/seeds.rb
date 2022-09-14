@@ -21,3 +21,9 @@ q6 = Quote.create(content: "Obstacles are those frightful things you see when yo
 pwd = "123456"
 admin = User.create(email: "admin@gmail.com", password: pwd, password_confirmation: pwd)
 user = User.create(email: "user@gmail.com", password: pwd, password_confirmation: pwd)
+
+category_sport = Category.create(name: "Sports")
+category_travel = Category.create(name: "Travel")
+category_inspiration = Category.create(name: "Inspiration")
+category_gift = Category.create(name: "Gift")
+category_mind = Category.create(name: "Mind")

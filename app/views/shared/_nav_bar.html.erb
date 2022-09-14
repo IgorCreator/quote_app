@@ -15,6 +15,9 @@
         <li class="nav-item">
           <%= link_to 'Authors', authors_path, class: "nav-link" %>
         </li>
+        <li class="nav-item">
+          <%= link_to 'Categories', categories_path, class: "nav-link" %>
+        </li>
         <% if user_signed_in? %>
           <li class="nav-item dropdown">
             <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
@@ -22,10 +25,10 @@
             </a>
             <ul class="dropdown-menu">
               <li><%= link_to 'Add new author', new_author_path, class: "dropdown-item" %></li>
-              <li>
-                <hr class="dropdown-divider">
-              </li>
+              <li><hr class="dropdown-divider"></li>
               <li><%= link_to 'Add new quote', new_quote_path, class: "dropdown-item" %></li>
+              <li><hr class="dropdown-divider"></li>
+              <li><%= link_to 'Add new category', new_category_path, class: "dropdown-item" %></li>
             </ul>
           </li>
         <% end %>

@@ -27,3 +27,11 @@ Inspiration came from the website [BrainyQuote](https://www.brainyquote.com)
 * How to run the test suite
 * Services (job queues, cache servers, search engines, etc.)
 * Deployment instructions
+
+***
+### TODO:
+1. Add admin functionality?
+2. Add username to the users?
+3. Add author fast search selection for Quotes create action
+4. Add duplication mechanism for quotes. How make it?
+5. Add search func/service across all quotes and authors

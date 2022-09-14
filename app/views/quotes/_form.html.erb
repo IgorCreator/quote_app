@@ -11,6 +11,21 @@
             <%= f.text_area :content, rows: 5, class: "form-control shadow rounded", placeholder: "Content of quote" %>
           </div>
         </div>
+
+        <div class="form-group row">
+          <%= f.label :author, class: "col-2 col-form-label text-light" %><br/>
+          <div class="col-10">
+            <%= f.collection_select(
+                  :author_id, Author.all, :id, :full_name,
+                  { prompt: "Please choose author (can't be empty)"},
+                  {
+                    class: "form-select shadow rounded",
+                    placeholder: "Please choose Author (can't be empty)"
+                  })
+            %>
+          </div>
+        </div>
+
         <div class="form-group row">
           <%= f.label :category, class: "col-2 col-form-label text-light" %><br/>
           <div class="col-10">
@@ -19,13 +34,12 @@
                   { prompt: "Make your selection from the list below (can be empty)"},
                   {
                     multiple: true,
-                    class: "custom-select shadow rounded",
+                    class: "form-select shadow rounded",
                     placeholder: "Make your selection from the list below (can be empty)"
                   })
             %>
           </div>
         </div>
-
 
         <div class="d-flex form-group justify-content-center m-2">
           <%= f.submit class: "btn btn-outline-light btn-lg" %>

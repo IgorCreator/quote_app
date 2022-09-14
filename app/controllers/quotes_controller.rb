@@ -18,7 +18,6 @@ class QuotesController < ApplicationController
 
   def create
     @quote = Quote.new(quote_params)
-    @quote.author = Author.first # TODO: fix this mock
     if @quote.save
       flash[:notice] = "Quote was created successfully."
       redirect_to @quote
@@ -49,6 +48,6 @@ class QuotesController < ApplicationController
   end
 
   def quote_params
-    params.require(:quote).permit(:content)
+    params.require(:quote).permit(:content, :author_id, category_ids: [])
   end
 end

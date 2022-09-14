@@ -6,4 +6,5 @@ Rails.application.routes.draw do
 
   resources :quotes
   resources :authors
+  resources :categories, except: [:destroy]
 end

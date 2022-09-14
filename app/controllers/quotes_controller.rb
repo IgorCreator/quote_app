@@ -1,4 +1,5 @@
 class QuotesController < ApplicationController
+  skip_before_action :authenticate_user!, only: [:show, :index]
   before_action :set_quote, only: [:show, :edit, :update, :destroy]
 
   def show

@@ -13,8 +13,10 @@
             <%= gravatar_for author, size: 75 %>
             <p class="card-text"><%= pluralize(author.quotes.count, "quote") %></p>
             <%= link_to "View", author_path(author), class: "btn btn-outline-success" %>
-            <%= link_to "Edit", edit_author_path(author), class: "btn btn-outline-info" %>
-            <%= link_to "Delete", author_path(author), class: "btn btn-outline-danger", method: :delete, data: { confirm: "Are you sure?" } %>
+            <% if user_signed_in? %>
+              <%= link_to "Edit", edit_author_path(author), class: "btn btn-outline-info" %>
+              <%= link_to "Delete", author_path(author), class: "btn btn-outline-danger", method: :delete, data: { confirm: "Are you sure?" } %>
+            <% end %>
           </div>
           <div class="card-footer text-muted">
             <small>Added <%= time_ago_in_words(author.created_at) %> ago</small>

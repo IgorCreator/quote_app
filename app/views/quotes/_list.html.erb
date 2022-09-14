@@ -10,8 +10,10 @@
         <div class="card-body">
           <p class="card-text"><%= truncate(quote.content, length: 100) %></p>
           <%= link_to "View", quote_path(quote), class: "btn btn-outline-success" %>
-          <%= link_to "Edit", edit_quote_path(quote), class: "btn btn-outline-info" %>
-          <%= link_to "Delete", quote_path(quote), class: "btn btn-outline-danger", method: :delete, data: { confirm: "Are you sure?" } %>
+          <% if user_signed_in? %>
+            <%= link_to "Edit", edit_quote_path(quote), class: "btn btn-outline-info" %>
+            <%= link_to "Delete", quote_path(quote), class: "btn btn-outline-danger", method: :delete, data: { confirm: "Are you sure?" } %>
+          <% end %>
         </div>
         <div class="card-footer text-muted">
           <small>Created <%= time_ago_in_words(quote.created_at) %> ago,

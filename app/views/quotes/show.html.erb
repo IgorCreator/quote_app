@@ -2,13 +2,17 @@
   <div class="row justify-content-md-center">
     <div class="col-8 mt-4">
       <div class="card text-center shadow mb-5 bg-white rounded">
-        <div class="card-header font-italic">
-          by <%= @quote.author.full_name if @quote.author %>
-        </div>
+        <% if @quote.author %>
+          <div class="card-header font-italic">
+            by <%= link_to @quote.author.full_name, author_path(@quote.author) %>
+          </div>
+        <% end %>
         <div class="card-body">
           <h4 class="card-text mt-4"><%= simple_format(@quote.content) %></h4>
-          <%= link_to "Edit", edit_quote_path(@quote), class: "btn btn-outline-info" %>
-          <%= link_to "Delete", quote_path(@quote), class: "btn btn-outline-danger", method: :delete, data: {confirm: "Are you sure?"} %>
+          <% if user_signed_in? %>
+            <%= link_to "Edit", edit_quote_path(@quote), class: "btn btn-outline-info" %>
+            <%= link_to "Delete", quote_path(@quote), class: "btn btn-outline-danger", method: :delete, data: { confirm: "Are you sure?" } %>
+          <% end %>
         </div>
         <div class="card-footer text-muted">
           <small>Created <%= time_ago_in_words(@quote.created_at) %> ago,

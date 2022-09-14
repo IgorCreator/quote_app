@@ -11,6 +11,22 @@
             <%= f.text_area :content, rows: 5, class: "form-control shadow rounded", placeholder: "Content of quote" %>
           </div>
         </div>
+        <div class="form-group row">
+          <%= f.label :category, class: "col-2 col-form-label text-light" %><br/>
+          <div class="col-10">
+            <%= f.collection_select(
+                  :category_ids, Category.all, :id, :name,
+                  { prompt: "Make your selection from the list below (can be empty)"},
+                  {
+                    multiple: true,
+                    class: "custom-select shadow rounded",
+                    placeholder: "Make your selection from the list below (can be empty)"
+                  })
+            %>
+          </div>
+        </div>
+
+
         <div class="d-flex form-group justify-content-center m-2">
           <%= f.submit class: "btn btn-outline-light btn-lg" %>
         </div>

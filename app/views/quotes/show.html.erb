@@ -5,6 +5,9 @@
         <% if @quote.author %>
           <div class="card-header font-italic">
             by <%= link_to @quote.author.full_name, author_path(@quote.author) %>
+            <% if @quote.categories.any? %>
+              <div class="mt-2"><%= render @quote.categories %></div>
+            <% end %>
           </div>
         <% end %>
         <div class="card-body">

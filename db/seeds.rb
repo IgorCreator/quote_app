@@ -27,3 +27,10 @@ category_travel = Category.create(name: "Travel")
 category_inspiration = Category.create(name: "Inspiration")
 category_gift = Category.create(name: "Gift")
 category_mind = Category.create(name: "Mind")
+
+category_inspiration.quotes << q1
+category_inspiration.quotes << q2
+category_inspiration.quotes << q3
+category_mind.quotes << q4
+category_mind.quotes << q5
+category_mind.quotes << q6

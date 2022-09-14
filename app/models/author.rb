@@ -4,7 +4,7 @@ class Author < ApplicationRecord
     self.last_name = last_name.capitalize if self.last_name
   end
 
-  has_many :quotes
+  has_many :quotes, dependent: :destroy
   validates :first_name, presence: true
 
   validates_uniqueness_of :first_name,

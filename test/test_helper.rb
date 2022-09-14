@@ -9,5 +9,16 @@ class ActiveSupport::TestCase
   # Setup all fixtures in test/fixtures/*.yml for all tests in alphabetical order.
   fixtures :all
 
-  # Add more helper methods to be used by all tests here...
+  include Devise::Test::IntegrationHelpers
+
+  def sing_in_as_user
+    password = "123456"
+    @new_user = User.create(email: "test@gmail.com", password: password)
+    login(@new_user)
+  end
+
+  def login(user)
+    sign_in(user)
+  end
+
 end

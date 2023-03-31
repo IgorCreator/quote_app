@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2022_09_14_184807) do
+ActiveRecord::Schema.define(version: 2022_09_19_223420) do
 
   create_table "authors", force: :cascade do |t|
     t.string "first_name"
@@ -18,6 +18,8 @@ ActiveRecord::Schema.define(version: 2022_09_14_184807) do
     t.string "last_name"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
+    t.string "prefix"
+    t.string "suffix"
     t.index ["first_name", "last_name"], name: "index_authors_on_first_name_and_last_name", unique: true
   end
 
@@ -37,6 +39,7 @@ ActiveRecord::Schema.define(version: 2022_09_14_184807) do
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
     t.integer "author_id"
+    t.float "popularity", default: 0.0, null: false
   end
 
   create_table "users", force: :cascade do |t|

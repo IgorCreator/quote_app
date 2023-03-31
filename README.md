@@ -31,7 +31,17 @@ Inspiration came from the website [BrainyQuote](https://www.brainyquote.com)
 ***
 ### TODO:
 1. Add admin functionality?
-2. Add username to the users?
+2. Add username and images to the users?
 3. Add author fast search selection for Quotes create action
 4. Add duplication mechanism for quotes. How make it?
 5. Add search func/service across all quotes and authors
+6. Auto upload for Authors and Quotes from json file
+7. Prettify selection for author and categories
+
+***
+### Run app
+`rails db:seed`     - seed Database with mock data
+`rails db:migrate`  - apply all migrations on Database
+`rails s`           - start server
+`rails c`           - start console
+`rails routes --expanded`  - see all routes in console

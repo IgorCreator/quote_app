@@ -22,8 +22,8 @@ Inspiration came from the website [BrainyQuote](https://www.brainyquote.com)
 
 * Ruby version - 2.7.5
 * Rails version - 6.1.6.1
-* Database creation
 * Database initialization
+* Database creation
 * How to run the test suite
 * Services (job queues, cache servers, search engines, etc.)
 * Deployment instructions

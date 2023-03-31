@@ -40,8 +40,10 @@ Inspiration came from the website [BrainyQuote](https://www.brainyquote.com)
 
 ***
 ### Run app
-`rails db:seed`     - seed Database with mock data
-`rails db:migrate`  - apply all migrations on Database
-`rails s`           - start server
-`rails c`           - start console
-`rails routes --expanded`  - see all routes in console
+| CMD                       | Description                      |
+|---------------------------|----------------------------------|
+| `rails db:seed`           | seed Database with mock data     |
+| `rails db:migrate`        | apply all migrations on Database |
+| `rails s`                 | start server                     |
+| `rails c`                 | start console                    |
+| `rails routes --expanded` | see all routes in console        |

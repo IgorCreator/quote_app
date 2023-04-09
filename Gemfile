@@ -32,10 +32,12 @@ gem 'bootsnap', '>= 1.4.4', require: false
 
 gem 'bootstrap', '~> 5.2.0'
 
-gem 'webpacker', '~> 5.0'
-
 gem 'will_paginate', '~> 3.3'
 gem 'will_paginate-bootstrap-style'
+
+gem 'nameable', '~> 1.1', '>= 1.1.4'
+
+gem 'json', '~> 2.6', '>= 2.6.2'
 
 group :development, :test do
   # Use sqlite3 as the database for Active Record
